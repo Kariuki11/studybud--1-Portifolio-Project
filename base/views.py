@@ -49,4 +49,5 @@ def updateRoom(request, pk):
     context ={'form': form}
     return render(request, 'base/room_form.html', context)
 
-
+def deleteRoom(request, pk):
+    return render(request, 'base/delete.html', {'obj':room})
