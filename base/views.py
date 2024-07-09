@@ -40,7 +40,8 @@ def updateRoom(request, pk):
     room = Room.objects.get(id=pk)
     form = RoomForm(instance=room)
     
-    if request.
+    if request.method == 'POST':
+        form = RoomForm(request.POST, instance=room)
     
     
     context ={'form': form}
