@@ -12,7 +12,8 @@ from .forms import RoomForm
 
 
 def home(request):
-    rooms = Room.objects.all()
+    q = request.GET.get('q')
+    rooms = Room.objects.filter(topic__name=q)
     
     topics = Topic.objects.all()
     
