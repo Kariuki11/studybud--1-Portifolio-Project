@@ -3,7 +3,7 @@
 {% block content %}
 
 <form method="POST" action="">
-    <div class="form-group">
+    {% csrf_token %}
 </form>
 
 {% endblock content %}
