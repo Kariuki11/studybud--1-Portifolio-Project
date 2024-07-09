@@ -4,7 +4,11 @@
 
 <div>
     <form method="POST" actions="">
+        {% csrf_token %}
 
+        <input type="text" value="user" placeholder="Enter Your usrename"
+
+        <input type="submit" value="Login">
     </form>
 </div>
 
