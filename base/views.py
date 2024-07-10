@@ -23,7 +23,7 @@ def loginPage(request):
         try:
             User = User.objects.get(username=username)
         except:
-            
+            messages.error(request, 'User does not exist')
         
     context = {}
     return render(request, 'base/login_register.html', context)
