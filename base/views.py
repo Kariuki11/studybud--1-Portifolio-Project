@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django
+from django.contrib import messages
 from django.db.models import Q
 from django.contrib.auth.models import User
 from .models import Room, Topic
