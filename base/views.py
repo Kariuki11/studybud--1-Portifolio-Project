@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django
 from django.db.models import Q
 from django.contrib.auth.models import User
 from .models import Room, Topic
@@ -21,6 +22,8 @@ def loginPage(request):
         
         try:
             User = User.objects.get(username=username)
+        except:
+            
         
     context = {}
     return render(request, 'base/login_register.html', context)
