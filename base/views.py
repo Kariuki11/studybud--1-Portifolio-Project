@@ -30,6 +30,7 @@ def loginPage(request):
         
         if user is not None:
             login(request, user)
+            return redirect('home')
         
     context = {}
     return render(request, 'base/login_register.html', context)
