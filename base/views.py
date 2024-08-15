@@ -6,7 +6,7 @@ from django.contrib.auth import authenticate, login, logout
 from .models import Room, Topic
 from .forms import RoomForm
 
-# Create your views here.
+#Create your views here.
 
 # rooms =[
 #     {'id':1, 'name':'Lets learn python!'},
