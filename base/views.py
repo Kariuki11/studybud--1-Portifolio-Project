@@ -94,12 +94,18 @@ def updateRoom(request, pk):
         if form.is_valid():
             form.save()
             return redirect('home')
+        
     
     context ={'form': form}
     return render(request, 'base/room_form.html', context)
 
+
+@login_required(login_url='login')
 def deleteRoom(request, pk):
     room = Room.objects.get(id=pk)
+    
+    if request.user != room.user.host:
+        return HttpResponse('You are not allowed here!!')
     if request.method == 'POST':
         room.delete()
         return redirect('home')
