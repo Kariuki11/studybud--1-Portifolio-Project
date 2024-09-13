@@ -51,7 +51,6 @@ class Message(models.Model):
         return self.body[0:50]
     
     
-    asja,NKJLKQMDSAKS   SNN
 
 
 
